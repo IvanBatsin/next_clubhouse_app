@@ -1,6 +1,6 @@
 import { useRouter } from 'next/dist/client/router';
 import Header from '../../components/Header/Header';
-import styles from './style.module.scss';
+import styles from './profile.module.scss';
 import Link from 'next/link';
 
 const ProfilePage: React.FC = () => {

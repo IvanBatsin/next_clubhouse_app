@@ -1,5 +1,5 @@
 import React from 'react';
-import styles from './style.module.scss';
+import styles from './enterPhoneStep.module.scss';
 import StepHeader from '../../components/StepHeader';
 import WhiteBlock from '../../components/WhiteBlock';
 import NumberFormat from 'react-number-format';

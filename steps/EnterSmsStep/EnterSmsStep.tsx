@@ -1,7 +1,7 @@
 import React, { ChangeEvent } from 'react';
 import StepHeader from '../../components/StepHeader';
 import WhiteBlock from '../../components/WhiteBlock';
-import styles from './style.module.scss';
+import styles from './enterSmsStep.module.scss';
 import Button from '../../components/Button/Button';
 import Loader from '../../components/Loader/Loader';
 import axios from '../../core/axios';

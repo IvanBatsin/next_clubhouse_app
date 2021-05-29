@@ -2,7 +2,7 @@ import Button from '../../components/Button/Button';
 import StepHeader from '../../components/StepHeader';
 import WhiteBlock from '../../components/WhiteBlock';
 import { useMainContext } from '../../pages';
-import styles from './style.module.scss';
+import styles from './twitterStep.module.scss';
 
 const TwitterStep: React.FC = () => {
   const { onNextStep } = useMainContext();

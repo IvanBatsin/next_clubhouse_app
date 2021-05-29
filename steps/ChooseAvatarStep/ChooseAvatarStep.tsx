@@ -1,7 +1,7 @@
 import React from 'react';
 import Button from '../../components/Button/Button';
 import WhiteBlock from '../../components/WhiteBlock';
-import styles from './style.module.scss';
+import styles from './chooseAvatarStep.module.scss';
 import StepHeader from '../../components/StepHeader';
 import { useMainContext } from '../../pages';
 

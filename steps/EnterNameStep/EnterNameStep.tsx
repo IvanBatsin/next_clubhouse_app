@@ -1,6 +1,6 @@
 import React from 'react';
 import WhiteBlock from '../../components/WhiteBlock';
-import styles from './style.module.scss';
+import styles from './enterNameStep.module.scss';
 import Button from '../../components/Button/Button';
 import StepHeader from '../../components/StepHeader';
 import { useMainContext } from '../../pages';

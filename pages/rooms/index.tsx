@@ -1,5 +1,5 @@
 import Header from '../../components/Header/Header';
-import styles from './style.module.scss';
+import styles from './rooms.module.scss';
 import classNames from 'classnames';
 
 interface RoomProps {
