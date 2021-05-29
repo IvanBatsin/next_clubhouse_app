@@ -1,0 +1,46 @@
+.header {
+  h4 {
+    margin-bottom: 0;
+  }
+  span {
+    margin-bottom: 25px;
+  }
+}
+.input_block {
+  display: flex;
+  align-items: center;
+  padding: 20px;
+  border-radius: 10px;
+  border: 1px solid rgb(199, 198, 198);
+  margin-bottom: 30px;
+
+  img {
+    width: 20px;
+    height: 20px;
+    margin-right: 5px;
+  }
+
+  input {
+    border: none;
+    outline: none;
+    font-size: 20px;
+    width: 190px;
+  }
+}
+.info {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+
+  button {
+    width: fit-content;
+    margin: auto;
+    margin-bottom: 20px;
+  }
+
+  p {
+    text-align: center;
+    color: rgb(175, 175, 175);
+    font-size: 14px;
+  }
+}

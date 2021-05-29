@@ -1,0 +1,113 @@
+.rooms_header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  button {
+    padding: 10px 20px;
+    border-radius: 15px;
+    outline: none;
+    border: none;
+    color: white;
+    transition: .2s;
+  }
+
+  div {
+    display: flex;
+    align-items: center;
+
+    h1 {
+      margin-right: 10px;
+    }
+
+    button {
+      background-color: rgba($color: #000000, $alpha: .2);
+
+      &:hover {
+        background-color: rgba($color: #000000, $alpha: .3);
+      }
+    }
+  }
+
+  button {
+    background-color: rgb(5, 180, 5);
+
+    &:hover {
+      background-color: rgb(7, 150, 7);
+    }
+  }
+}
+
+.content {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+.room {
+  padding: 15px;
+  background-color: white;
+  border-radius: 15px;
+  flex-basis: 300px;
+
+  h3 {
+    margin: 0;
+    margin-bottom: 10px;
+  }
+}
+.room_content {
+  display: flex;
+
+  .room_avatar {
+    position: relative;
+    margin-right: 20px;
+
+    &_big {
+      width: 50px;
+      height: 50px;
+      // background-image: url('../../public/assets/girl2.jpg');
+      background-position: center;
+      background-size: cover;
+      border-radius: 10px;
+    }
+
+    &_small {
+      position: relative;
+      width: 35px;
+      height: 35px;
+      // background-image: url('../../public/assets/girl2.jpg');
+      background-position: center;
+      background-size: cover;
+      border-radius: 10px;
+
+      &_second {
+        top: -10px;
+        left: 15px;
+        margin-right: 5px;
+      }
+    }
+  }
+
+  .room_about {
+    display: flex;
+    flex-direction: column;
+
+    ul {
+      padding: 0;
+      margin: 0;
+      list-style: none;
+    }
+  }
+
+  .room_info {
+    margin-top: 10px;
+
+    span {
+      color: rgb(163, 163, 163);
+      font-size: 14px;
+    }
+
+    .participants {
+      margin-right: 10px;
+    }
+  }
+}

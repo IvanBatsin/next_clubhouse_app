@@ -1,0 +1,36 @@
+.nav {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 40px;
+  border-bottom: 1px solid rgb(179, 179, 179);
+
+  &_logo, &_profile {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+  }
+
+  &_logo {
+    img {
+      width: 30px;
+      height: 30px;
+      margin-right: 10px;
+    }
+  }
+
+  &_profile {
+    .avatar {
+      width: 35px;
+      height: 35px;
+      border-radius: 10px;
+      background-image: url('../../public/assets/girl2.jpg');
+      background-size: cover;
+    }
+
+    span {
+      margin-right: 10px;
+      font-weight: bold;
+      font-size: 16px;
+    }
+  }
+}

@@ -1,0 +1,23 @@
+.myBtn {
+  padding: 10px 18px;
+  background-color: #5776AE;
+  color: white;
+  border-radius: 15px;
+  border: none;
+  transition: .2s;
+  user-select: none;
+  cursor: pointer;
+
+  &:hover {
+    background-color: lighten(#5776AE, 5%);
+  }
+
+  &.disabled {
+    background-color: grey;
+
+    &:active {
+      transform: translateY(0);
+    }
+  }
+  
+}

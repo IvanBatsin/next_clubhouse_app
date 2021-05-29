@@ -1,0 +1,33 @@
+.header {
+  margin-bottom: 35px;
+
+  h4 {
+    margin: 10px 0;
+  }
+}
+.content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  
+  .photo {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    background-position: center;
+    background-size: cover;
+  }
+
+  span {
+    color: #5776AE;
+    font-size: 14px;
+    margin-bottom: 20px;
+    cursor: pointer;
+    transition: .2s;
+
+    &:hover {
+      color: darken(#5776AE, 10%);
+    }
+  }
+}

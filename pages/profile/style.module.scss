@@ -1,0 +1,114 @@
+.content {
+  display: flex;
+  flex-direction: column;
+
+  .back {
+    padding: 5px;
+    cursor: pointer;
+    font-weight: bold;
+    font-size: 20px;
+    transition: .2s;
+    margin-bottom: 20px;
+
+    &:active {
+      transform: translateY(3px);
+    }
+  }
+}
+
+.profile_block {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+
+  &_left {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+
+    &_avatar {
+      width: 70px;
+      height: 70px;
+      background-image: url('../../public/assets/girl2.jpg');
+      background-size: cover;
+      background-position: center;
+      border-radius: 10px;
+      margin-right: 20px;
+    }
+
+    .profile_info {
+      margin-right: 10px;
+  
+      h3 {
+        margin: 0;
+      }
+      span {
+        color: grey;
+        font-size: 14px;
+      }
+    }
+  
+    button {
+      background-color: inherit;
+      padding: 6px 20px;
+      color: rgb(18, 39, 233);
+      border-radius: 15px;
+      border: 1px solid rgb(18, 39, 233);
+      transition: .2s;
+      margin-right: 10px;
+  
+      &:hover {
+        background-color: rgba($color: #585858, $alpha: .2)
+      }
+      &:active {
+        transform: translateY(3px);
+      }
+    }
+  
+    .settings {
+      display: flex;
+      flex-direction: column;
+      height: 28px;
+      justify-content: space-between;
+      padding: 5px;
+      cursor: pointer;
+  
+      div {
+        width: 4px;
+        height: 4px;
+        background-color: rgb(163, 163, 163);
+        transition: .2s;
+        border-radius: 4px;
+      }
+
+      &:hover {
+        div {
+          background-color: rgb(138, 138, 138);
+        }
+      }
+    }
+  }
+
+  &_right {
+    display: flex;
+    flex-direction: row;
+    background-color: white;
+    border-radius: 10px;
+    padding: 5px 15px;
+
+    .followers, .following {
+      padding: 10px;
+
+      h4 {
+        margin: 0;
+        font-size: 24px;
+        text-align: center;
+      }
+      span {
+        color: rgb(179, 179, 179);
+        font-weight: bold;
+      }
+    }
+  }
+}

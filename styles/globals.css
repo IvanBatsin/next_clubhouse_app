@@ -1,9 +1,13 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;600;800&display=swap');
+
 html,
 body {
   padding: 0;
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
-    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+  /* font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
+    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif; */
+  background-color: #F2EFE4;
+  font-family: 'Nunito', sans-serif;
 }
 
 a {
@@ -13,4 +17,18 @@ a {
 
 * {
   box-sizing: border-box;
+}
+
+.btn {
+  transition: .2s;
+}
+.btn:active {
+  transform: translateY(3px);
+}
+
+.container {
+  min-width: 100vw;
+  padding: 0 20px;
+  display: flex;
+  flex-direction: column;
 }
