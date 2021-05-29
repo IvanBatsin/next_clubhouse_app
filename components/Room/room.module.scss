@@ -1,0 +1,23 @@
+.room {
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+  background-color: white;
+  border-radius: 15px;
+
+  &_header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    button {
+      border: none;
+      background-color: rgb(233, 233, 233);
+      color: rgb(224, 4, 4);
+      padding: 10px 20px;
+      border-radius: 15px;
+      font-weight: 600;
+      letter-spacing: .2px;
+    }
+  }
+}

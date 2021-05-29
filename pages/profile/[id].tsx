@@ -1,20 +1,17 @@
 import { useRouter } from 'next/dist/client/router';
 import Header from '../../components/Header/Header';
 import styles from './profile.module.scss';
-import Link from 'next/link';
+import BackButton from '../../components/BackButton/BackButton';
 
 const ProfilePage: React.FC = () => {
   const router = useRouter();
   const { id } = router.query;
-  console.log(id);
 
   return (
     <div className="container">
       <Header/>
       <div className={styles.content}>
-        <Link href="/rooms">
-          <span className={styles.back}>&larr; Back</span>
-        </Link>
+        <BackButton title="Back" href="/rooms"/>
         <div className={styles.profile_block}>
           <div className={styles.profile_block_left}>
             <div className={styles.profile_block_left_avatar}></div> 
