@@ -40,7 +40,8 @@
 
 .content {
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
   flex-wrap: wrap;
   align-items: flex-start;
+  gap: 1rem;
 }

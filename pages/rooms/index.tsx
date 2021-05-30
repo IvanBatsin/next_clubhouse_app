@@ -1,45 +1,26 @@
+import React from 'react';
 import Header from '../../components/Header/Header';
 import styles from './rooms.module.scss';
 import ConversationCard from '../../components/ConversationCard/ConversationCard';
 import Link from 'next/link';
+import axios from '../../core/axios';
+import { GetServerSideProps } from 'next';
 
-interface RoomProps {
+interface RoomAttr {
   id: number,
   title: string,
-  speakersNames: string[],
+  guests: string[],
   speakersAvatars: string[],
   participants: number,
   comments: number
 };
 
-const rooms: RoomProps[] = [
-  {
-    id: 1,
-    title: 'Better die rather live boring',
-    comments: 12,
-    participants: 3,
-    speakersAvatars: ['assets/girl2.jpg', 'assets/girl2.jpg', 'assets/girl2.jpg'],
-    speakersNames: ['Julie', 'Ruby Da Cherry', 'Scrim']
-  },
-  {
-    id: 2,
-    title: 'Smoke lines on my face',
-    comments: 12,
-    participants: 3,
-    speakersAvatars: ['assets/girl2.jpg', 'assets/girl2.jpg'],
-    speakersNames: ['Suicideboys', 'City Morgue']
-  },
-  {
-    id: 4,
-    title: 'Memoirse of gorilla',
-    comments: 12,
-    participants: 3,
-    speakersAvatars: ['assets/girl2.jpg'],
-    speakersNames: ['Sleezy']
-  },
-]
+interface RoomsProps {
+  rooms: RoomAttr[],
+  error?: boolean
+}
 
-const Rooms: React.FC = () => {
+const Rooms: React.FC<RoomsProps> = ({rooms, error}) => {
   return (
     <div className="container">
       <Header/>
@@ -51,7 +32,8 @@ const Rooms: React.FC = () => {
         <button className="btn">+ Start room</button>
       </div>
       <div className={styles.content}>
-        {
+        {error && <h2>We have error</h2>}
+        {!error && 
           rooms.map((room, index) => {
             return <Link key={index} href={`/rooms/${room.id}`}>
               <a>
@@ -59,7 +41,7 @@ const Rooms: React.FC = () => {
                   id={room.id}
                   comments={room.comments}
                   speakersAvatars={room.speakersAvatars}
-                  speakersNames={room.speakersNames}
+                  guests={room.guests}
                   participants={room.participants}
                   title={room.title}
                 />
@@ -73,3 +55,23 @@ const Rooms: React.FC = () => {
 }
 
 export default Rooms;
+
+export const getServerSideProps: GetServerSideProps = async (ctx) => {
+  try {
+    const {data: rooms} = await axios.get('http://localhost:5050/rooms');
+    return {
+      props: {
+        rooms
+      }
+    };
+  } catch (error) {
+    console.log(error);
+    return {
+      props: {
+        rooms: [],
+        error: true
+      }
+    }
+  }
+
+}

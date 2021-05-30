@@ -4,13 +4,13 @@ import classNames from 'classnames';
 interface ConversationCardProps {
   id: number,
   title: string,
-  speakersNames: string[],
+  guests: string[],
   speakersAvatars: string[],
   participants: number,
   comments: number
 };
 
-const ConversationCard: React.FC<ConversationCardProps> = ({comments, speakersNames, id, speakersAvatars, participants, title}) => {
+const ConversationCard: React.FC<ConversationCardProps> = ({comments, guests, id, speakersAvatars, participants, title}) => {
   return (
     <div key={id} className={styles.room}>
       <h3>{title}</h3>
@@ -33,7 +33,11 @@ const ConversationCard: React.FC<ConversationCardProps> = ({comments, speakersNa
         </div>
         <div className={styles.room_about}>
           <ul>
-            {speakersNames.map((name, index) => {
+            {guests.map((name, index) => {
+              if (index > 3) return;
+              if (index === 3) {
+                return <li key={index}>...</li>
+              }
               return <li key={index}>{name}</li>
             })}
           </ul>

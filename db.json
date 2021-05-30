@@ -3,34 +3,34 @@
     {
       "id": 1,
       "title": "SuicideBoys is best music group",
-      "speakersAvatars": ["assets/girl2.jpg", "assets/girl2.jpg", "assets/girl2.jpg"],
-      "speakersCount": 2,
-      "guestsCount": 33,
+      "comments": 12,
+      "participants": 2,
+      "speakersAvatars": ["https://source.unsplash.com/random/100*100?1", "https://source.unsplash.com/random/100*100?2", "https://source.unsplash.com/random/100*100?3"],
       "guests": ["Julie", "Ruby Da Cherry", "Scrim", "ZillaKami", "SosMula", "Slim Shadie", "Rey Misterio", "Big Show"]
     },
     {
       "id": 2,
       "title": "City Morgue new albume",
-      "speakersCount": 23,
-      "guestsCount": 3,
-      "speakersAvatars": ["assets/girl2.jpg"],
+      "comments": 3213,
+      "participants": 45,
+      "speakersAvatars": ["https://source.unsplash.com/random/100*100?4"],
       "guests": ["Sleezy", "Young Nekit", "Slow Jack", "Jon Jons", "Larry Willson"]
     },
     {
       "id": 3,
       "title": "Just chating",
-      "speakersCount": 12,
-      "guestsCount": 3,
-      "speakersAvatars": ["assets/girl2.jpg", "assets/girl2.jpg"],
+      "comments": 67,
+      "participants": 23,
+      "speakersAvatars": ["https://source.unsplash.com/random/100*100?5", "https://source.unsplash.com/random/100*100?6"],
       "guests": ["Julie", "Ruby Da Cherry", "Scrim", "Skyrim", "BigDaddy", "Lova", "JJ"]
     },
     {
       "id": 4,
       "title": "Society Fuck The Population",
-      "speakersCount": 12,
-      "guestsCount": 3,
-      "speakersAvatars": ["assets/girl2.jpg", "assets/girl2.jpg"],
-      "guests": ["Julie", "Ruby Da Cherry", "Scrim", "Skyrim", "BigDaddy", "Lova", "JJ"]
+      "comments": 88,
+      "participants": 4,
+      "speakersAvatars": ["https://source.unsplash.com/random/100*100?7", "https://source.unsplash.com/random/100*100?8"],
+      "guests": ["Julie", "Slick"]
     }
   ]
 }
