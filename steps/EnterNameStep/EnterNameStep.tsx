@@ -6,10 +6,15 @@ import StepHeader from '../../components/StepHeader';
 import { useMainContext } from '../../pages';
 
 const EnterNameStep: React.FC = () => {
-  const [name, setName] = React.useState<string>('');
-  const { onNextStep } = useMainContext();
+  const { onNextStep, userData, setFieldValue } = useMainContext();
+  const [userName, setUserName] = React.useState<string>(userData!.userName);
 
-  const nextDisabled = !name.length;
+  const nextDisabled = !userName.length;
+
+  const handleNextClick = (): void => {
+    setFieldValue!('userName', userName);
+    onNextStep!();
+  }
 
   return (
     <div>
@@ -20,8 +25,8 @@ const EnterNameStep: React.FC = () => {
       </StepHeader>
       <WhiteBlock>
         <div className={styles.input_name}>
-          <input value={name} type="text" placeholder="Name" onChange={event => setName(event.target.value)}/>
-          <Button disabled={nextDisabled} onClick={onNextStep}>Next &rarr;</Button>
+          <input value={userName} type="text" placeholder="Name" onChange={event => setUserName(event.target.value)}/>
+          <Button disabled={nextDisabled} onClick={handleNextClick}>Next &rarr;</Button>
         </div>
       </WhiteBlock>
     </div>
